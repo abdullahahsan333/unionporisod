@@ -1,0 +1,77 @@
+/* privilege style start */
+.body_content .privilege_content .table td {
+    vertical-align: top;
+    padding: 6px 8px;
+}
+.privilege_content {position: relative ;}
+.privilege_content .group_menu {
+    flex-wrap: wrap;
+    display: flex;
+}
+.privilege_content tr td:first-child {padding-top: 9px !important;}
+.privilege_content .condition_group {position: relative;}
+.privilege_content .condition_group > .custom-switch.open::before,
+.privilege_content .condition_group > .custom-switch.open::after {display: inline-block;} 
+.privilege_content .condition_btn.open {display: flex;}
+.privilege_content .condition_btn {
+    border: 1px solid #dee2e6;
+    padding: 0 10px;
+    display: none;
+    left: 37px;
+    top: 25px;
+    z-index: 9;
+    margin-left: 37px;
+    background: #F5F7FA;
+} 
+.privilege_content .condition_btn .custom-switch:last-child {margin-right: 0;}
+.privilege_content .custom-switch {
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    padding-left: 36px;
+    margin: 4px 20px 3px 0px;
+}
+.privilege_content .condition_btn::before {
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    display: inline-block;
+    position: absolute;
+    content: '';
+    top: 42px;
+    left: 27px;
+    border-left: 5px solid #dee2e6;
+    border-top: 5px solid transparent;
+}
+.condition_group > .custom-control.custom-switch::before {
+    background: #dee2e6;
+    position: absolute;
+    display: none;
+    content: '';
+    width: 2px;
+    left: 15px;
+    top: 20px;
+    height: 22px;
+}
+.condition_group > .custom-control.custom-switch::after {
+    background: #dee2e6;
+    position: absolute;
+    display: none;
+    content: '';
+    width: 16px;
+    left: 11px;
+    top: 42px;
+    height: 2px;
+}
+.privilege_content .table thead {background: #F5F7FA;}
+.privilege_content .table thead th {border-bottom: 0;}
+.privilege_content .custom-control-label {
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+}
+.privilege_content .custom-control-label::before {top: .20rem;}
+.privilege_content .custom-control-label::after {top: calc(.20rem + 2px);}
+.privilege_content .custom-control-input:checked~.custom-control-label::before {background: #303F9F;}
+.privilege_content .custom-control-input:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgb(48 63 159 / 25%);
+}
+/* privilege style end */

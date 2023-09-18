@@ -1,0 +1,26 @@
+@page {margin: 0}
+.panel_body {margin: 0}
+.sheet{ margin: 0; overflow: hidden; position: relative; box-sizing: border-box;page-break-after: always;}
+/** Paper sizes **/
+.panel_body.A3           .sheet { width: 297mm; height: 419mm }
+.panel_body.A3.landscape .sheet { width: 420mm; height: 296mm }
+.panel_body.A4           .sheet { width: 210mm; height: 296mm }
+.panel_body.A4.landscape .sheet { width: 297mm; height: 209mm }
+.panel_body.A5           .sheet { width: 148mm; height: 209mm }
+.panel_body.A5.landscape .sheet { width: 210mm; height: 147mm }
+/** Padding area **/
+.sheet.padding-10mm { padding: 10mm }
+.sheet.padding-15mm { padding: 15mm }
+.sheet.padding-20mm { padding: 20mm }
+.sheet.padding-25mm { padding: 25mm }
+/** For screen preview **/
+@media screen {
+  .sheet {margin: 5mm;}
+}
+/** Fix for Chrome issue #273306 **/
+@media print {
+    .panel_body.A3.landscape { width: 420mm }
+    .panel_body.A3, .panel_body.A4.landscape { width: 297mm }
+    .panel_body.A4, .panel_body.A5.landscape { width: 210mm }
+    .panel_body.A5 { width: 148mm }
+}
