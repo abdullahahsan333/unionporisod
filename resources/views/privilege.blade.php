@@ -494,18 +494,6 @@
                                                 <label class="custom-control-label" for="add_affidavit_checked"> নাগরিকত্ব সনদপত্র </label>
                                             </div>
                                             @endif
-                                            @if(accessPrivilege("affidavit","inheritance_certificate",""))
-                                            <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" name="menu[affidavit][submenu][inheritance_certificate]" value="inheritance_certificate" {{ (!empty($menuList->notice->submenu->inheritance_certificate) ? ($menuList->notice->submenu->inheritance_certificate=="inheritance_certificate" ? "checked" : "") : "") }} id="inheritance_certificate_checked">
-                                                <label class="custom-control-label" for="inheritance_certificate_checked"> উত্তরাধিকার সনদপত্র </label>
-                                            </div>
-                                            @endif
-                                            @if(accessPrivilege("affidavit","family_certificate",""))
-                                            <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" name="menu[affidavit][submenu][family_certificate]" value="family_certificate" {{ (!empty($menuList->notice->submenu->family_certificate) ? ($menuList->notice->submenu->family_certificate=="family_certificate" ? "checked" : "") : "") }} id="family_certificate_checked">
-                                                <label class="custom-control-label" for="family_certificate_checked"> পারিবারিক সনদপত্র </label>
-                                            </div>
-                                            @endif
                                             @if(accessPrivilege("affidavit","unmarried_certificate",""))
                                             <div class="custom-control custom-switch">
                                                 <input type="checkbox" class="custom-control-input" name="menu[affidavit][submenu][unmarried_certificate]" value="unmarried_certificate" {{ (!empty($menuList->notice->submenu->unmarried_certificate) ? ($menuList->notice->submenu->unmarried_certificate=="unmarried_certificate" ? "checked" : "") : "") }} id="unmarried_certificate_checked">

@@ -10,14 +10,6 @@
         <li><a class="addAffidavit" href="{{route('admin.affidavit.create')}}">২য় নাগরিকত্ব সনদপত্র </a></li>
         @endif
 
-        @if(accessPrivilege("affidavit","inheritance_certificate",""))
-        <li><a class="inheritanceCertificate" href="{{route('admin.affidavit.inheritance')}}">৩য় উত্তরাধিকার সনদপত্র</a></li>
-        @endif
-
-        @if(accessPrivilege("affidavit","family_certificate",""))
-        <li><a class="familyCertificate" href="{{route('admin.affidavit.family')}}">৪র্থ পারিবারিক সনদপত্র</a></li>
-        @endif
-
         @if(accessPrivilege("affidavit","unmarried_certificate",""))
         <li><a class="unmarriedCertificate" href="{{route('admin.affidavit.unmarried')}}">৫ম অবিবাহিত সনদপত্র </a></li>
         @endif

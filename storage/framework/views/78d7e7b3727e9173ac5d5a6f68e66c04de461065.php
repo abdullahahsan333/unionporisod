@@ -5,6 +5,7 @@
         <?php ($privilege = Auth::user()->privilege); ?>
         <!-- required meta tags -->
         <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- CSRF Token -->
@@ -243,14 +244,6 @@
 
                             <?php if(accessPrivilege("affidavit","add_affidavit","")): ?>
                             <li class="addAffidavit"><a href="<?php echo e(route('admin.affidavit.create')); ?>">২য় নাগরিকত্ব সনদপত্র </a></li>
-                            <?php endif; ?>
-
-                            <?php if(accessPrivilege("affidavit","inheritance_certificate","")): ?>
-                            <li class="inheritanceCertificate"><a href="<?php echo e(route('admin.affidavit.inheritance')); ?>">৩য় উত্তরাধিকার সনদপত্র </a></li>
-                            <?php endif; ?>
-
-                            <?php if(accessPrivilege("affidavit","family_certificate","")): ?>
-                            <li class="familyCertificate"><a href="<?php echo e(route('admin.affidavit.family')); ?>">৪র্থ পারিবারিক সনদপত্র </a></li>
                             <?php endif; ?>
 
                             <?php if(accessPrivilege("affidavit","unmarried_certificate","")): ?>
